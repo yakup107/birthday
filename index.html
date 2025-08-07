@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
@@ -18,7 +18,6 @@
       color: white;
     }
 
-    /* Yıldızlar */
     .stars {
       position: absolute;
       width: 100%;
@@ -42,7 +41,6 @@
       50% { opacity: 1; }
     }
 
-    /* Zarf */
     .envelope {
       position: relative;
       width: 370px;
@@ -76,12 +74,14 @@
       background: white;
       color: #333;
       border-radius: 10px;
-      padding: 20px;
+      padding: 15px;
       box-sizing: border-box;
       transform: translateY(100%);
       opacity: 0;
       transition: all 1s ease;
       z-index: 1;
+      overflow-y: auto;
+      font-size: 0.95rem;
     }
 
     .envelope.open .flap {
@@ -102,16 +102,17 @@
     @media (max-width: 400px) {
       .envelope {
         width: 90%;
-        height: 300px;
+        height: 280px;
       }
 
       .card {
-        height: 250px;
-        padding: 15px;
+        height: 240px;
+        padding: 12px;
+        font-size: 0.85rem;
       }
 
       .card h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
   </style>
@@ -124,27 +125,25 @@
     <div class="flap"></div>
     <div class="card">
       <h2>Tuana 💖</h2>
-      <p>Bu küçük kart, sana ufak bir jest olsun istedim.
-Doğum gününü birlikte kutluyor olsak, güzel bir hediye de vermek isterdim.
-Ama bu seferlik böyle, bir mesajla yetinelim.
-
-Umarım bu yeni yaşın, hayalini kurduğun her şeyin başlangıcı olur.
-Yeni yaşında yanında olmayı ve birlikte unutulmaz anılar biriktirmeyi çok isterim.
-En azından ben hiçbirini unutmam.
-
-Her şey gönlünce olsun.
-Doğum günün kutlu olsun 
-      İyi ki varsın... 🌙</p>
+      <p>
+        Bu küçük kart, sana ufak bir jest olsun istedim.<br>
+        Doğum gününü birlikte kutluyor olsak, güzel bir hediye de vermek isterdim.<br>
+        Ama bu seferlik böyle, bir mesajla yetinelim.<br><br>
+        Umarım bu yeni yaşın, hayalini kurduğun her şeyin başlangıcı olur.<br>
+        Yeni yaşında yanında olmayı ve birlikte unutulmaz anılar biriktirmeyi çok isterim.<br>
+        En azından ben hiçbirini unutmam.<br><br>
+        Her şey gönlünce olsun.<br>
+        Doğum günün kutlu olsun.<br>
+        İyi ki varsın... 🌙
+      </p>
     </div>
   </div>
 
   <script>
-    // Zarf açma
     function openEnvelope(el) {
       el.classList.add("open");
     }
 
-    // Yıldızları rastgele oluştur
     function createStars(count) {
       const starsContainer = document.getElementById('stars');
       for (let i = 0; i < count; i++) {
@@ -162,4 +161,5 @@ Doğum günün kutlu olsun
 
 </body>
 </html>
+
 
